@@ -3,9 +3,6 @@ import { StaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
 import LandingPage from "../components/landing-page"
 
-
-
-
 const IndexPage = () => (
   <StaticQuery
     query={graphql`
@@ -13,6 +10,7 @@ const IndexPage = () => (
         contentfulV1LandingPage {
           slug
           landingTemplate {
+            
             title
             socialMediaList {
               text
@@ -25,10 +23,16 @@ const IndexPage = () => (
             contactList {
               text
             }
+            backgroundImage {
+              fluid(maxWidth: 1400, quality: 100) {
+                ...GatsbyContentfulFluid_withWebp_noBase64
+              }
+            }
           }
           browserPageTitle
           keywords
           metaData
+          
         }
       }
     `}
@@ -37,12 +41,12 @@ const IndexPage = () => (
 
       return (
         <React.Fragment>
-           <SEO
+          <SEO
             title={landingPageData.browserPageTitle}
             description={landingPageData.metaData}
             keywords={landingPageData.keywords}
           />
-          <LandingPage landingPageData={landingPageData.landingTemplate}/>
+          <LandingPage landingPageData={landingPageData.landingTemplate} />
         </React.Fragment>
       )
     }}

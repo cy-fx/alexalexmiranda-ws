@@ -1,5 +1,7 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Link } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
+
 import landingPageStyle from "./style.module.scss"
 import "../../reusable-styles/styles.scss"
 
@@ -12,63 +14,74 @@ const bgImages = [
 const LandingPage = ({ landingPageData }) => {
   const { contactList, navigationList, socialMediaList } = landingPageData
   return (
-    <section id="landingPage" className={landingPageStyle.landingPageComponent}>
-      <div className={landingPageStyle.pageContainer}>
-        <h1 className={landingPageStyle.mainTitle}>{landingPageData.title}</h1>
-        <nav className={landingPageStyle.navigation}>
-          {navigationList.map((item, index) => (
-            <div className={landingPageStyle.items}>
-              <Link
-                className={landingPageStyle.link}
-                to={item.href}
-                key={index}
-              >
-                <span className={landingPageStyle.navigationNumber}>{`0${
-                  index + 1
-                }`}</span>
-                <h2 className={landingPageStyle.title}>
-                  {item.text} <span className={landingPageStyle.line}></span>
-                </h2>
-                <figure className={landingPageStyle.imageHolder}>
-                  <img
-                    className={landingPageStyle.imageSource}
-                    src={bgImages[index]}
-                  />
-                </figure>
-              </Link>
-            </div>
-          ))}
-        </nav>
-
-        <footer className={landingPageStyle.footer}>
-          <article
-            className={`${landingPageStyle.contact} ${landingPageStyle.column}`}
-          >
-            {contactList.map((item, index) => (
-              <p className={landingPageStyle.contactItem} key={index}>
-                {item.text}
-              </p>
-            ))}
-          </article>
-          <article className={`${landingPageStyle.socialMedia}`}>
-            <div className={`${landingPageStyle.container}`}>
-              {socialMediaList.map((item, index) => (
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  className={landingPageStyle.socialMediaItem}
-                  href={item.href}
+    <BackgroundImage
+      Tag="section"
+      fluid={landingPageData.backgroundImage.fluid}
+      className={landingPageStyle.landingPageBg}
+    >
+      <section
+        id="landingPage"
+        className={landingPageStyle.landingPageComponent}
+      >
+        <div className={landingPageStyle.pageContainer}>
+          <h1 className={landingPageStyle.mainTitle}>
+            {landingPageData.title}
+          </h1>
+          <nav className={landingPageStyle.navigation}>
+            {navigationList.map((item, index) => (
+              <div className={landingPageStyle.items}>
+                <Link
+                  className={landingPageStyle.link}
+                  to={item.href}
                   key={index}
                 >
+                  <span className={landingPageStyle.navigationNumber}>{`0${
+                    index + 1
+                  }`}</span>
+                  <h2 className={landingPageStyle.title}>
+                    {item.text} <span className={landingPageStyle.line}></span>
+                  </h2>
+                  <figure className={landingPageStyle.imageHolder}>
+                    <img
+                      className={landingPageStyle.imageSource}
+                      src={bgImages[index]}
+                    />
+                  </figure>
+                </Link>
+              </div>
+            ))}
+          </nav>
+
+          <footer className={landingPageStyle.footer}>
+            <article
+              className={`${landingPageStyle.contact} ${landingPageStyle.column}`}
+            >
+              {contactList.map((item, index) => (
+                <p className={landingPageStyle.contactItem} key={index}>
                   {item.text}
-                  <span className={landingPageStyle.coma}>,</span>
-                </a>
+                </p>
               ))}
-            </div>
-          </article>
-        </footer>
-      </div>
-    </section>
+            </article>
+            <article className={`${landingPageStyle.socialMedia}`}>
+              <div className={`${landingPageStyle.container}`}>
+                {socialMediaList.map((item, index) => (
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    className={landingPageStyle.socialMediaItem}
+                    href={item.href}
+                    key={index}
+                  >
+                    {item.text}
+                    <span className={landingPageStyle.coma}>,</span>
+                  </a>
+                ))}
+              </div>
+            </article>
+          </footer>
+        </div>
+      </section>
+    </BackgroundImage>
   )
 }
 
