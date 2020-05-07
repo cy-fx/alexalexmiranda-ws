@@ -1,0 +1,79 @@
+@import "../../reusable-styles/variables";
+@import "../../reusable-styles/mixings";
+
+.hero001Component {
+  overflow: hidden;
+}
+
+.componentContainer{
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  max-width: $maxWidth;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.mainTitle {
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  font-weight: bolder;
+  font-size: 90px;
+  z-index: 1;
+  color: white;
+  -webkit-text-fill-color: transparent; 
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+}
+
+.heroImage {
+ 
+  margin-top: -40px;
+}
+
+.imageHolder {
+  background-color: black;
+  
+  z-index: 0;
+  width: 500px;
+  height: 600px;
+}
+.imageSource {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.imageFooter{
+  font-size: 12px;
+  .key{
+    font-family: serif;
+    color: #999;
+    margin-right: 5px;
+  }
+  
+  .value{
+    color: $white;
+    text-transform: uppercase;
+  }
+}
+
+
+
+
+@include tablet {
+}
+
+@include mobile {
+}
