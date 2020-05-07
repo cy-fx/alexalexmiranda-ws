@@ -1,0 +1,549 @@
+@import "../../reusable-styles/variables";
+@import "../../reusable-styles/mixings";
+
+.pageDesign001Component {
+  overflow: hidden;
+  background-color: #222;
+}
+
+.pageContainer {
+  padding: 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+  max-width: $maxWidth;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.siteTitle,
+.navigation {
+  width: 50%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navigation .link {
+  display: inline-block;
+  color: $white;
+  .title {
+    position: relative;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+
+  .line {
+    position: absolute;
+    width: 0;
+    opacity: 0;
+    transition: 0.3s;
+    height: 3px;
+    background-color: $red;
+    top: 120%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+  }
+
+  .title:hover {
+    color: $red;
+    transition: 0.3s;
+  }
+
+  .title:hover .line {
+    color: $red;
+    width: 100%;
+    opacity: 1;
+    transition: 0.3s;
+    height: 3px;
+    left: 50%;
+    background-color: $red;
+  }
+}
+
+.hero {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.mainTitle {
+  position: relative;
+  text-transform: uppercase;
+  color: $white;
+  font-weight: bolder;
+  font-size: 90px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.heroImage {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.imageHolder {
+  background-color: black;
+  margin-top: -40px;
+  z-index: 0;
+  width: 500px;
+  height: 600px;
+}
+.imageSource {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.siteTitle {
+  font-size: 20px;
+  color: $white;
+}
+
+.navigation {
+  display: flex;
+
+  .link {
+    display: flex;
+    margin-left: 10px;
+    position: relative;
+    font-size: 20px;
+    color: $white;
+    text-transform: uppercase;
+  }
+}
+
+.section01 {
+  background-color: #dedede;
+  .panelContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    padding: 200px 20px;
+  }
+
+  .panel {
+    display: flex;
+    width: 100%;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: initial;
+  }
+  .number {
+    font-weight: lighter;
+    font-size: 20px;
+    color: $black;
+  }
+  .title {
+    font-size: 50px;
+    color: $black;
+  }
+  .paragraphBox {
+    font-size: 34px;
+    width: 50%;
+  }
+  .paragraph {
+    line-height: 1.2;
+  }
+}
+
+.section01 .link {
+  margin: 40px 0 0;
+  display: inline-block;
+  .title {
+    position: relative;
+    font-size: 20px;
+    color: #999;
+    transition: 0.3s;
+  }
+
+  .line {
+    position: absolute;
+    width: 0;
+    opacity: 0;
+    transition: 0.3s;
+    height: 3px;
+    background-color: $red;
+    top: 120%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+  }
+
+  .title:hover {
+    color: $red;
+    transition: 0.3s;
+  }
+
+  .title:hover .line {
+    color: $red;
+    width: 100%;
+    opacity: 1;
+    transition: 0.3s;
+    height: 3px;
+    left: 50%;
+    background-color: $red;
+  }
+}
+
+.section01:hover .link .title {
+  color: $red;
+  transition: 0.3s;
+}
+
+.section02 {
+  color: $white;
+  overflow: hidden;
+
+  background-color: $black;
+  .panelContainer {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .panel {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    min-height: 600px;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    padding: 100px 20px 40px;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    width: 50%;
+  }
+  .number {
+    font-weight: lighter;
+    font-size: 20px;
+  }
+  .title {
+    font-size: 50px;
+  }
+
+  .paragraphBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    font-size: 16px;
+    width: 50%;
+  }
+  .paragraph {
+    width: 50%;
+    line-height: 1.6;
+  }
+}
+
+.section02 .imageBox {
+  width: 50%;
+  margin-bottom: 20px;
+  .imageHolder {
+    background-color: black;
+    width: 100%;
+    height: 200px;
+  }
+  .imageSource {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+  }
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  .imageHolder {
+    width: 100%;
+    margin: 0;
+  }
+  .imageSource {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+}
+
+.section03 {
+  color: $white;
+  overflow: hidden;
+  background-color: $black;
+  .panelContainer {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    padding: 100px 20px;
+  }
+
+  .panel {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+  }
+  .number {
+    font-weight: lighter;
+    font-size: 20px;
+  }
+  .title {
+    line-height: 0.8;
+    font-size: 120px;
+  }
+  .paragraphBox {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    font-size: 16px;
+    width: 50%;
+  }
+  .paragraph {
+    width: 50%;
+    line-height: 1.2;
+  }
+  .extraInfo {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  .titleBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .question {
+    font-family: serif;
+    color: #999;
+    margin-right: 4px;
+  }
+  .answer {
+    text-transform: uppercase;
+  }
+  .division {
+    margin: 0 10px;
+    color: #999;
+  }
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  .imageHolder {
+    width: 100%;
+    margin: 0;
+  }
+  .imageSource {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+}
+
+.section04 {
+  background-color: #dedede;
+  .panelContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    padding: 200px 20px;
+  }
+
+  .panel {
+    display: flex;
+    width: 100%;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: initial;
+  }
+  .number {
+    font-weight: lighter;
+    font-size: 20px;
+    color: $black;
+  }
+  .title {
+    font-size: 50px;
+    color: $black;
+  }
+  .tweet {
+    font-size: 34px;
+    width: 50%;
+  }
+  .paragraph {
+    line-height: 1.2;
+  }
+  .hashtags{
+    display: block;
+    color: #999;
+  }
+}
+
+.section04 .link {
+  margin: 40px 0 0;
+  display: inline-block;
+  .title {
+    position: relative;
+    font-size: 20px;
+    color: #999;
+    transition: 0.3s;
+  }
+
+  .line {
+    position: absolute;
+    width: 0;
+    opacity: 0;
+    transition: 0.3s;
+    height: 3px;
+    background-color: $red;
+    top: 120%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+  }
+
+  .title:hover {
+    color: $red;
+    transition: 0.3s;
+  }
+
+  .title:hover .line {
+    color: $red;
+    width: 100%;
+    opacity: 1;
+    transition: 0.3s;
+    height: 3px;
+    left: 50%;
+    background-color: $red;
+  }
+  
+}
+
+.section04:hover .link .title {
+  color: $red;
+  transition: 0.3s;
+}
+
+.profilePicture {
+  margin: 20px 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  .imageHolder {
+    margin-top: 0;
+    width: 40px;
+    height: 40px;
+  }
+  .imageSource {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    border-radius: 50%;
+  }
+  .nameAndLocation {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  .name{
+    line-height: 1.1;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .location{
+    line-height: 1.1;
+
+    color: #555;
+    font-size: 14px;
+  }
+}
+
+.icon {
+  margin: 20px 0;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  .imageHolder {
+    margin-top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: initial;
+  }
+  .imageSource {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+  }
+  .nameAndLocation {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  .name{
+    line-height: 1.1;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .location{
+    line-height: 1.1;
+
+    color: #555;
+    font-size: 14px;
+  }
+}
+
+@include tablet {
+}
+
+@include mobile {
+}
