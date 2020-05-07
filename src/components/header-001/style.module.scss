@@ -1,0 +1,87 @@
+@import "../../reusable-styles/variables";
+@import "../../reusable-styles/mixings";
+
+.header001Component{
+
+
+}
+
+.componentContainer{
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  max-width: $maxWidth;
+  margin: 0 auto;
+  
+}
+
+.header {
+  display: flex;
+  margin-bottom: 40px;
+  color: $white;
+}
+
+.siteTitle,
+.navigation {
+  width: 50%;
+}
+
+.siteTitle{
+  .title{
+    font-size: 20px;
+  }
+  .registered{
+    color: $red;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  
+}
+
+.navigation .link {
+  display: inline-block;
+  color: $white;
+  margin-left: 20px;
+  .title {
+    position: relative;
+    transition: 0.3s;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  .line {
+    position: absolute;
+    width: 0;
+    opacity: 0;
+    transition: 0.3s;
+    height: 3px;
+    background-color: $red;
+    top: 120%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+  }
+
+  .title:hover {
+    color: $red;
+    transition: 0.3s;
+  }
+
+  .title:hover .line {
+    color: $red;
+    width: 100%;
+    opacity: 1;
+    transition: 0.3s;
+    height: 3px;
+    left: 50%;
+    background-color: $red;
+  }
+}
+
+
+@include tablet {
+}
+
+@include mobile {
+}

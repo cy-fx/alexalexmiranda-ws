@@ -1,0 +1,129 @@
+@import "../../reusable-styles/variables";
+@import "../../reusable-styles/mixings";
+
+.panel006Component {
+  overflow: hidden;
+  background-color: #222;
+  color: $white;
+}
+
+.componentContainer{
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+
+.section06 {
+  color: $white;
+  overflow: hidden;
+  background-color: $black;
+  .panelContainer {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    padding: 100px 20px;
+  }
+
+  .panel {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+  }
+  .number {
+    font-weight: lighter;
+    font-size: 20px;
+  }
+  .title {
+    line-height: 0.8;
+    font-size: 120px;
+  }
+  .paragraphBox {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    font-size: 16px;
+    width: 50%;
+  }
+  .paragraph {
+    width: 50%;
+    line-height: 1.2;
+  }
+  .extraInfo {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  .titleBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+  }
+  .question {
+    font-family: serif;
+    color: #999;
+    margin-right: 4px;
+  }
+  .answer {
+    text-transform: uppercase;
+  }
+  .division {
+    margin: 0 10px;
+    color: #999;
+  }
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  .imageHolder {
+    width: 100%;
+    margin: 0;
+  }
+  .imageSource {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+}
+
+.divLine{
+  display: flex;
+  width: 50%;
+  height: 8px;
+  background-color: $white;
+  margin: 0 20px;
+  min-width: 100px;
+}
+
+
+
+@include tablet {
+}
+
+@include mobile {
+}
