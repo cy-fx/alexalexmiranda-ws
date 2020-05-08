@@ -29,16 +29,51 @@
 .siteTitle{
   .title{
     font-size: 20px;
+    font-weight: bold;
+    color: white;
+    transition: .3s;
+
+  }
+  .year{
+    font-size: 20px;
   }
   .registered{
     color: $red;
   }
 }
 
+.siteTitle .title:hover{
+  color: $red;
+  transition: .3s;
+}
+
 .navigation {
   display: flex;
   justify-content: flex-end;
-  
+ 
+}
+
+.navigation .link{
+  display: inline-block;
+  color: $white;
+  .activeTitle{
+    position: relative;
+    transition: 0.3s;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #555;
+  }
+  .activeLine {
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+    transition: 0.3s;
+    height: 2px;
+    background-color: #555;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .navigation .link {
@@ -56,15 +91,14 @@
     width: 0;
     opacity: 0;
     transition: 0.3s;
-    height: 3px;
+    height: 2px;
     background-color: $red;
-    top: 120%;
+    top: 50%;
     left: 0%;
     transform: translate(-50%, -50%);
   }
 
   .title:hover {
-    color: $red;
     transition: 0.3s;
   }
 

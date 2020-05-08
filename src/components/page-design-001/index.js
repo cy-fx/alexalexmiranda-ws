@@ -11,7 +11,7 @@ import Panel004 from "../panel-004"
 const aboutData = {mainTitle:"About", heroImage:"https://instagram.fmex11-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/70185525_140306647222044_7151595098728929950_n.jpg?_nc_ht=instagram.fmex11-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=IT4BRrxJhv0AX_jAtJl&oh=18d466a5dde55b6612207a6ad9baf92c&oe=5EDBE6A5"}
 
 
-const pageDesign001 = () => {
+const PageDesign001 = () => {
   return (
     <section
       id="pageDesign001"
@@ -29,4 +29,4 @@ const pageDesign001 = () => {
   )
 }
 
-export default pageDesign001
+export default PageDesign001
