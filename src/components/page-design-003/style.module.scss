@@ -1,0 +1,23 @@
+@import "../../reusable-styles/variables";
+@import "../../reusable-styles/mixings";
+
+.pageDesign003Component {
+  overflow: hidden;
+  background-color: #111;
+}
+
+.pageContainer {
+  padding: 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+  max-width: $maxWidth;
+  margin: 0 auto;
+}
+
+
+
+@include tablet {
+}
+
+@include mobile {
+}
